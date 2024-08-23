@@ -1,0 +1,143 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{1176CE4F-3B05-4E17-B409-C5BCF0814A9A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>GeneticAlgorithm</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="GeneticAlgorithm\GeneticAlgorithm.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Chromosome.cs" />
+    <Compile Include="Core\GeneticAlgorithm.cs" />
+    <Compile Include="Core\Population.cs" />
+    <Compile Include="FitnessFunctions\IFitnessFunction.cs" />
+    <Compile Include="FitnessFunctions\SphereFunction.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Debug\net6.0\GeneticAlgorithm.AssemblyInfo.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Debug\net6.0\GeneticAlgorithm.GlobalUsings.g.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Release\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Release\net6.0\GeneticAlgorithm.AssemblyInfo.cs" />
+    <Compile Include="GeneticAlgorithm\obj\Release\net6.0\GeneticAlgorithm.GlobalUsings.g.cs" />
+    <Compile Include="GeneticAlgorithm\Program.cs" />
+    <Compile Include="GeneticOperators\Crossover\ICrossoverStrategy.cs" />
+    <Compile Include="GeneticOperators\Crossover\SinglePointCrossover.cs" />
+    <Compile Include="GeneticOperators\Mutation\IMutationStrategy.cs" />
+    <Compile Include="GeneticOperators\Mutation\SimpleMutation.cs" />
+    <Compile Include="GeneticOperators\Replacement\ElitismReplacement.cs" />
+    <Compile Include="GeneticOperators\Replacement\IReplacement.cs" />
+    <Compile Include="GeneticOperators\Selection\ISelection.cs" />
+    <Compile Include="GeneticOperators\Selection\RouletteWheelSelection.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\AUTO_MERGE" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\sendemail-validate.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\main" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\main" />
+    <None Include=".git\objects\25\4b27b739025e6098f1f6aa6c4036fe2b05cee8" />
+    <None Include=".git\objects\31\c2752ca72dd176db24d6da529dfec85fdae02e" />
+    <None Include=".git\objects\94\d49496c190ff6f54061e8572fa3d45a771ef30" />
+    <None Include=".git\objects\9b\956f990074e30bcaff85bf164f35b8f5cf4b4d" />
+    <None Include=".git\objects\ba\b92748317199e7415100e7f74b882ab2a234fd" />
+    <None Include=".git\objects\pack\pack-13ef74050214ba148f1dfc67efd2ceebce0777d8.idx" />
+    <None Include=".git\objects\pack\pack-13ef74050214ba148f1dfc67efd2ceebce0777d8.pack" />
+    <None Include=".git\objects\pack\pack-13ef74050214ba148f1dfc67efd2ceebce0777d8.rev" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\main" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\main" />
+    <None Include=".vs\genetic-algorithm\FileContentIndex\b77b6157-1539-423a-87aa-b186d5e57a8d.vsidx" />
+    <None Include=".vs\genetic-algorithm\v17\.wsuo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="GeneticAlgorithm\GeneticAlgorithm.csproj" />
+    <None Include="GeneticAlgorithm\obj\Debug\net6.0\GeneticAlgorithm.AssemblyInfoInputs.cache" />
+    <None Include="GeneticAlgorithm\obj\Debug\net6.0\GeneticAlgorithm.assets.cache" />
+    <None Include="GeneticAlgorithm\obj\Debug\net6.0\GeneticAlgorithm.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="GeneticAlgorithm\obj\GeneticAlgorithm.csproj.nuget.dgspec.json" />
+    <None Include="GeneticAlgorithm\obj\GeneticAlgorithm.csproj.nuget.g.props" />
+    <None Include="GeneticAlgorithm\obj\GeneticAlgorithm.csproj.nuget.g.targets" />
+    <None Include="GeneticAlgorithm\obj\project.assets.json" />
+    <None Include="GeneticAlgorithm\obj\project.nuget.cache" />
+    <None Include="GeneticAlgorithm\obj\Release\net6.0\GeneticAlgorithm.AssemblyInfoInputs.cache" />
+    <None Include="GeneticAlgorithm\obj\Release\net6.0\GeneticAlgorithm.assets.cache" />
+    <None Include="GeneticAlgorithm\obj\Release\net6.0\GeneticAlgorithm.GeneratedMSBuildEditorConfig.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="GeneticAlgorithm\bin\Debug\net6.0\" />
+    <Folder Include="GeneticAlgorithm\bin\Release\net6.0\" />
+    <Folder Include="GeneticAlgorithm\obj\Debug\net6.0\refint\" />
+    <Folder Include="GeneticAlgorithm\obj\Debug\net6.0\ref\" />
+    <Folder Include="GeneticAlgorithm\obj\Release\net6.0\refint\" />
+    <Folder Include="GeneticAlgorithm\obj\Release\net6.0\ref\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
